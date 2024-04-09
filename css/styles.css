@@ -1,5 +1,3 @@
-/* @import 'https://fonts.googleapis.com/css?family=Roboto+Mono'; */
-
 @import 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400';
 
 
@@ -10,51 +8,24 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 300; /* Light */
   height: 100%;
-  background: url('../images/dots_bg') center center fixed #1c1c1c;
+  background: url('../images/dots_bg2.png') center center fixed #1c1c1c;
 	background-size: cover;
-	
-	
-	
-	
-	
-	
-	 /* fallback for old browsers 
-  /*background-color: -webkit-linear-gradient(-65deg, #16222D, #1C2B39);*/
-  /*background-color: linear-gradient(-65deg, #16222D, #1C2B39);*/
-
 
   font-size: 11px;
   letter-spacing: 0.05em;
   line-height: 1.5em;
   color: rgba(255,255,255,0.8 );
   
-  
-    
-    
-    /*background-image: url('../images/home.jpg');*/
+
 }
 
 
 
-/* 
 
-body.home {
-} */
 
 body.work {
   background-image: url('../images/work.jpg');
   background-position: bottom center;
-}
-/* 
-body.research {
-}
-
-body.prototype {
-} */
-
-body.speak {
-  background-image: url('../images/talk.jpg');
-  background-position: bottom left;
 }
 
 
@@ -80,44 +51,12 @@ nav#menu a {
   font-weight: 400; /* Normal weight */
 }
 
-
-
 /* PAGES */
 
 section#main {
   text-transform: uppercase;
 }
 
-
-
-
-
-
-/* Diff Pages */
-
-/*#home {
-  background-color: #1C2B39;
-}
-
-#research {
-  background-color: #093F1A;
-}
-
-#prototype {
-  background-color: #2C0404;
-}
-
-#speak {
-  background-color: #2C0421;
-}
-
-#work {
-  background-color: #182C04;
-}*/
-
-
-
-/* social links */
 #social-links {
 }
 
@@ -127,16 +66,6 @@ section#main {
   margin-left: 1em;
 }
 
-span.ender {
-  display: inline-block;
+#bottom {
   margin-top: 2em;
-  clear: left;
-}
-
-span.ender:after {
-  font-family: "FontAwesome";
-  content: '\f0e7';
-  opacity: 0.2;
-  font-size: 16px;
-
 }
