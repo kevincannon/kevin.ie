@@ -6,7 +6,7 @@ html, body { min-height:100%; }
 
 body {
   font-family: 'IBM Plex Mono', monospace;
-  font-weight: 300; /* Light */
+  font-weight: 400; /* Light */
   height: 100%;
   background: url('../images/dots_bg2.png') center center fixed #1c1c1c;
 	background-size: cover;
@@ -15,19 +15,9 @@ body {
   letter-spacing: 0.05em;
   line-height: 1.5em;
   color: rgba(255,255,255,0.8 );
-  
+  text-transform: uppercase;
 
 }
-
-
-
-
-
-body.work {
-  background-image: url('../images/work.jpg');
-  background-position: bottom center;
-}
-
 
 
 a, a:active, a:visited {
@@ -40,30 +30,19 @@ a:active, a:hover {
 
 
 
-/* controls */
-nav#menu {
-  text-transform: uppercase;
-}
-
-nav#menu a {
-  text-decoration: none;
-  user-select: none;
-  font-weight: 400; /* Normal weight */
-}
 
 /* PAGES */
 
-section#main {
-  text-transform: uppercase;
-}
 
 #social-links {
+  margin-top: 2em;
+  text-align: right;
 }
-
 #social-links a {
   text-decoration: none;
   font-size: 16px;
   margin-left: 1em;
+  text-align: right;
 }
 
 #bottom {

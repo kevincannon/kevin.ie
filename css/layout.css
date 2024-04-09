@@ -8,36 +8,17 @@ html, body  {
   height: 100%;
 }
 
-#grid-container {
-  min-height: 100%;
+
+body {
   display: flex;
-  flex-direction: column;
-  /* outline: 1px solid blue; */
-
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-#grid-container .box {
-  /* outline: 1px dotted red; */
-  position: relative;
-  margin-left: 10vw;
-}
-
-
-#top {
-  height: 27vh;
-}
-
-nav#menu {
-  position: absolute;
-  /* outline: 1px solid yellow; */
-  bottom: 0;
-}
 
 /* Changes for phones */
 
-@media (max-width : 480px) {
+/* @media (max-width : 480px) {
   #top {
     height: 130px;
   }
@@ -48,17 +29,18 @@ nav#menu {
     margin-right: 2em;
   }
 }
-
+ */
 
 #main {
   flex: 1;
   max-width: 35em;
-  margin-top: 2em;
+  min-width: 200px;
+  margin: 2em;
+  
+  height: 10em;
 }
 
 
-#bottom {
-}
 
 #bottom #social-links {
   text-align: right;
