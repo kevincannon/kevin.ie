@@ -34,10 +34,8 @@ body {
 #main {
   flex: 1;
   max-width: 35em;
-  min-width: 200px;
-  margin: 2em;
-  
-  height: 10em;
+  /* min-width: 200px; */
+  margin: 3em 2em 2em 2em;
 }
 
 

@@ -1,21 +1,22 @@
 @import 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400';
 
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500';
 
 
 html, body { min-height:100%; }
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400; /* Light */
+  font-family: 'Fira Sans', monospace;
+  font-weight: 300; /* Light */
   height: 100%;
   background: url('../images/dots_bg2.png') center center fixed #1c1c1c;
 	background-size: cover;
 
-  font-size: 11px;
-  letter-spacing: 0.05em;
+  font-size: 16px;
+  letter-spacing: 0.01em;
   line-height: 1.5em;
-  color: rgba(255,255,255,0.8 );
-  text-transform: uppercase;
+  color: rgba(255,255,255,1 );
+  /* text-transform: uppercase; */
 
 }
 
@@ -29,9 +30,34 @@ a:active, a:hover {
 }
 
 
+#cv-link span.arrow {
+  transition: transform 0.15s ease-in-out;
+}
+
+#cv-link:hover span.arrow {
+  transform: translateX(3px);
+}
+
+/* span.fa-arrow-pointer:hover {  
+  animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+} */
+
+/**
+ * ----------------------------------------
+ * animation slide-rotate-hor-top
+ * ----------------------------------------
+ */
+ @keyframes slide-rotate-hor-top {
+  0% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    transform: translateY(-150px) rotateZ(90deg);
+    /* transform: translateY(-150px) rotateX(-90deg); */
+  }
+}
 
 
-/* PAGES */
 
 
 #social-links {
