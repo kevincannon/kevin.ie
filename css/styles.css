@@ -11,7 +11,8 @@ body {
   font-family: "Fira Sans", monospace;
   font-weight: 300; /* Light */
   height: 100%;
-  background: url("../images/dots_bg2.png") center center fixed #1c1c1c;
+  background: #131719;
+  /* background: url("../images/dots_bg2.png") center center fixed #1c1c1c; */
   background-size: cover;
 
   font-size: 16px;
