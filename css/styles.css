@@ -1,34 +1,36 @@
-@import 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400';
+@import "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400";
 
-@import 'https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500';
+@import "https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500";
 
-
-html, body { min-height:100%; }
+html,
+body {
+  min-height: 100%;
+}
 
 body {
-  font-family: 'Fira Sans', monospace;
+  font-family: "Fira Sans", monospace;
   font-weight: 300; /* Light */
   height: 100%;
-  background: url('../images/dots_bg2.png') center center fixed #1c1c1c;
-	background-size: cover;
+  background: url("../images/dots_bg2.png") center center fixed #1c1c1c;
+  background-size: cover;
 
   font-size: 16px;
   letter-spacing: 0.01em;
   line-height: 1.5em;
-  color: rgba(255,255,255,1 );
+  color: rgba(255, 255, 255, 1);
   /* text-transform: uppercase; */
-
 }
 
-
-a, a:active, a:visited {
-  color: rgba(255,255,255,1);
+a,
+a:active,
+a:visited {
+  color: rgba(255, 255, 255, 1);
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   color: white;
 }
-
 
 #cv-link span.arrow {
   transition: transform 0.15s ease-in-out;
@@ -47,7 +49,7 @@ a:active, a:hover {
  * animation slide-rotate-hor-top
  * ----------------------------------------
  */
- @keyframes slide-rotate-hor-top {
+@keyframes slide-rotate-hor-top {
   0% {
     transform: translateY(0) rotateX(0deg);
   }
@@ -56,9 +58,6 @@ a:active, a:hover {
     /* transform: translateY(-150px) rotateX(-90deg); */
   }
 }
-
-
-
 
 #social-links {
   margin-top: 2em;
