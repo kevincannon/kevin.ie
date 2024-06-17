@@ -1,6 +1,6 @@
-@import "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400";
+/* @import "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,300,400"; */
 
-@import "https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500";
+@import "https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500";
 
 html,
 body {
@@ -9,16 +9,14 @@ body {
 
 body {
   font-family: "Fira Sans", monospace;
-  font-weight: 300; /* Light */
+  font-weight: 200; /* Light */
   height: 100%;
-  background: #131719;
-  /* background: url("../images/dots_bg2.png") center center fixed #1c1c1c; */
-  background-size: cover;
+  background: #1a2328;
 
   font-size: 16px;
   letter-spacing: 0.01em;
   line-height: 1.5em;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.8);
   /* text-transform: uppercase; */
 }
 
@@ -34,7 +32,7 @@ a:hover {
 }
 
 #cv-link span.arrow {
-  transition: transform 0.15s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 }
 
 #cv-link:hover span.arrow {
@@ -69,8 +67,33 @@ a:hover {
   font-size: 16px;
   margin-left: 1em;
   text-align: right;
+  color: #9297a8;
 }
 
+#social-links a {
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+#social-links a:hover {
+  color: white;
+  transform: scale(1.2);
+}
 #bottom {
   margin-top: 2em;
+}
+
+strong,
+span {
+  color: white;
+}
+strong {
+  font-weight: 400;
+}
+a {
+  font-weight: 400;
+  text-decoration: underline rgba(255, 255, 255, 0);
+  transition: all 0.2s ease;
+}
+a:hover {
+  text-decoration: underline rgba(255, 255, 255, 0.5);
 }
