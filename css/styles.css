@@ -12,9 +12,8 @@ body {
   font-weight: 200; /* Light */
   height: 100%;
   background: #1a2328;
-
   font-size: 16px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   line-height: 1.5em;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -103,18 +102,21 @@ a:hover {
 #social-links a {
   text-decoration: none;
   font-size: 16px;
-  margin-left: 1em;
+  margin-left: 0.5em;
   text-align: right;
   color: #9297a8;
-}
+  /* border: 1px solid grey; */
+  padding: 6px;
+  border-radius: 4px;
 
-#social-links a {
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
 #social-links a:hover {
   color: white;
   transform: scale(1.2);
+  /* outline: 1px solid rgba(255, 255, 255, 0.2); */
+  background-color: rgba(255, 255, 255, 0.07);
 }
 #bottom {
   margin-top: 2em;
@@ -128,10 +130,18 @@ strong {
   font-weight: 400;
 }
 a {
-  font-weight: 400;
-  text-decoration: underline rgba(255, 255, 255, 0);
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5) !important;
+
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 0.1px !important;
+  text-underline-offset: 4px;
+
   transition: all 0.2s ease;
 }
 a:hover {
-  text-decoration: underline rgba(255, 255, 255, 0.5);
+  text-decoration-color: rgba(255, 255, 255, 1) !important;
+  text-underline-offset: 5px;
 }
