@@ -95,11 +95,11 @@ a:hover {
   }
 }
 
-#social-links {
+#page-footer {
   margin-top: 2em;
   text-align: right;
 }
-#social-links a {
+#page-footer a {
   text-decoration: none;
   font-size: 16px;
   margin-left: 0.5em;
@@ -112,7 +112,7 @@ a:hover {
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
-#social-links a:hover {
+#page-footer a:hover {
   color: white;
   transform: scale(1.2);
   /* outline: 1px solid rgba(255, 255, 255, 0.2); */
