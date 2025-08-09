@@ -116,13 +116,7 @@ a:hover {
   color: white;
   transform: scale(1.2);
   /* outline: 1px solid rgba(255, 255, 255, 0.2); */
-}
-
-.svg-icon {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.07);
 }
 #bottom {
   margin-top: 2em;
