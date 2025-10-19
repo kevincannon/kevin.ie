@@ -84,7 +84,7 @@ function App() {
             media={[
               {
                 type: "video",
-                url: "/cv-site/media/AI-Presentation-Generator-at-Pitch.mp4",
+                url: "/media/AI-Presentation-Generator-at-Pitch.mp4",
               },
             ]}
           />
@@ -97,15 +97,15 @@ function App() {
             media={[
               {
                 type: "video",
-                url: "/cv-site/media/Presentation-Power-Tools-at-Pitch-1.mp4",
+                url: "/media/Presentation-Power-Tools-at-Pitch-1.mp4",
               },
               {
                 type: "video",
-                url: "/cv-site/media/Presentation-Power-Tools-at-Pitch-2.mp4",
+                url: "/media/Presentation-Power-Tools-at-Pitch-2.mp4",
               },
               {
                 type: "video",
-                url: "/cv-site/media/Presentation-Power-Tools-at-Pitch-3.mp4",
+                url: "/media/Presentation-Power-Tools-at-Pitch-3.mp4",
               },
             ]}
           />
@@ -118,15 +118,15 @@ function App() {
             media={[
               {
                 type: "image",
-                url: "/cv-site/media/Ikea-Home-Smart-at-Frog-Design-1.jpg",
+                url: "/media/Ikea-Home-Smart-at-Frog-Design-1.jpg",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Ikea-Home-Smart-at-Frog-Design-2.jpg",
+                url: "/media/Ikea-Home-Smart-at-Frog-Design-2.jpg",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Ikea-Home-Smart-at-Frog-Design-3.jpg",
+                url: "/media/Ikea-Home-Smart-at-Frog-Design-3.jpg",
               },
             ]}
           />
@@ -139,7 +139,7 @@ function App() {
             period="2024"
             description="Web app for creating customisable animated backgrounds. Inspired by my interest in shaders, Three.js, and SVG animation and the challenge of working with them."
             link="http://fluidmotion.app"
-            media={[{ type: "video", url: "/cv-site/media/FluidMotion.mp4" }]}
+            media={[{ type: "video", url: "/media/FluidMotion.mp4" }]}
           />
         </Section>
 
@@ -196,19 +196,19 @@ function App() {
             media={[
               {
                 type: "video",
-                url: "/cv-site/media/Sr-Design-Manager-at-Pitch-1.mp4",
+                url: "/media/Sr-Design-Manager-at-Pitch-1.mp4",
               },
               {
                 type: "video",
-                url: "/cv-site/media/Sr-Design-Manager-at-Pitch-2.mp4",
+                url: "/media/Sr-Design-Manager-at-Pitch-2.mp4",
               },
               {
                 type: "video",
-                url: "/cv-site/media/Sr-Design-Manager-at-Pitch-3.mp4",
+                url: "/media/Sr-Design-Manager-at-Pitch-3.mp4",
               },
               {
                 type: "video",
-                url: "/cv-site/media/Sr-Design-Manager-at-Pitch-4.mp4",
+                url: "/media/Sr-Design-Manager-at-Pitch-4.mp4",
               },
             ]}
           />
@@ -228,23 +228,23 @@ function App() {
             media={[
               {
                 type: "image",
-                url: "/cv-site/media/Principal-Interaction-Designer-at-Frog-Design-1.jpg",
+                url: "/media/Principal-Interaction-Designer-at-Frog-Design-1.jpg",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Principal-Interaction-Designer-at-Frog-Design-2.gif",
+                url: "/media/Principal-Interaction-Designer-at-Frog-Design-2.gif",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Principal-Interaction-Designer-at-Frog-Design-3.jpg",
+                url: "/media/Principal-Interaction-Designer-at-Frog-Design-3.jpg",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Principal-Interaction-Designer-at-Frog-Design-4.jpg",
+                url: "/media/Principal-Interaction-Designer-at-Frog-Design-4.jpg",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Principal-Interaction-Designer-at-Frog-Design-5.jpg",
+                url: "/media/Principal-Interaction-Designer-at-Frog-Design-5.jpg",
               },
             ]}
           />
@@ -257,15 +257,15 @@ function App() {
             media={[
               {
                 type: "image",
-                url: "/cv-site/media/Visiting-Lecturer-at-Copenhagen-Institute-of-Interaction-Design-1.jpg",
+                url: "/media/Visiting-Lecturer-at-Copenhagen-Institute-of-Interaction-Design-1.jpg",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Visiting-Lecturer-at-Copenhagen-Institute-of-Interaction-Design-2.jpg",
+                url: "/media/Visiting-Lecturer-at-Copenhagen-Institute-of-Interaction-Design-2.jpg",
               },
               {
                 type: "image",
-                url: "/cv-site/media/Visiting-Lecturer-at-Copenhagen-Institute-of-Interaction-Design-3.jpg",
+                url: "/media/Visiting-Lecturer-at-Copenhagen-Institute-of-Interaction-Design-3.jpg",
               },
             ]}
           />
