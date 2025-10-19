@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cv-dark: #1a2328;
+  --color-cv-text: rgba(255, 255, 255, 0.8);
+  --color-cv-white: rgba(255, 255, 255, 1);
+  --color-cv-muted: #9297a8;
+
+  --font-sans: "Fira Sans", sans-serif;
+}
+
+html {
+}
+
+body {
+  /* background-color: #0d120e; */
+  background-color: var(--color-cv-dark);
+  background-image: url("/cv-site/media/HeroGradient.png");
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  padding: 1em 0.5em;
+}
+
+a {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  /* text-decoration-style: wavy; */
+  text-decoration-thickness: 0.1px;
+  text-underline-offset: 3px;
+  transition: all 0s ease-out;
+}
+
+a:hover {
+  text-decoration-color: rgba(255, 255, 255, 1);
+  /* text-underline-offset: 5px; */
+}
+
+strong {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
