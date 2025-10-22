@@ -69,7 +69,7 @@ function App() {
             ship high impact work.
           </p>
           <p>
-            Over 20 years experience, working with agencies, startups and
+            Over 20 years' experience, working with agencies, startups and
             pioneering companies.
           </p>
         </Section>
@@ -150,9 +150,9 @@ function App() {
             company="Berlin"
             period="2025 — Now"
             bullets={[
-              "Building out an AI-first design team in Berlin office",
-              "Growing employer brand within the Berlin design scene",
-              "Leading design for AI Agents initiative",
+              "Building out an AI-first design team in Berlin office.",
+              "Growing employer brand within the Berlin design scene.",
+              "Leading design for AI Agents initiative.",
             ]}
             link="https://www.grammarly.com/back-to-school"
           />
@@ -161,11 +161,11 @@ function App() {
             company="Delhi, Remote"
             period="2024 — 2025"
             bullets={[
-              "Aftershoot is an AI-first tool for professional photographers",
-              "Led product design and UX improvements, expanded the design team",
-              "Advised founders on using design strategically to achieve business goals",
-              "Repositioned product to attract pro-sumer audience",
-              "Ongoing advisory role",
+              "Aftershoot is an AI-first tool for professional photographers.",
+              "Led product design and UX improvements, expanded the design team.",
+              "Advised founders on using design strategically to achieve business goals.",
+              "Repositioned product to attract prosumer audience.",
+              "Ongoing advisory role.",
             ]}
             link="https://www.aftershoot.com"
           />
@@ -174,10 +174,10 @@ function App() {
             company="Oakland, Remote"
             period="2024"
             bullets={[
-              "Helping design the future of large-scale research with AI",
-              "Design hiring & advising",
-              "Product strategy",
-              "Product Design & UX",
+              "Helping design the future of large-scale research with AI.",
+              "Design hiring & advising.",
+              "Product strategy.",
+              "Product Design & UX.",
             ]}
             link="https://www.elicit.com"
           />
@@ -216,11 +216,11 @@ function App() {
             title="Principal Interaction Designer at Frog Design"
             company="Munich"
             period="2010 — 2018"
-            description="Spent many wonderful years working with these lovely bunch of passionate creators and makers."
+            description="Spent many wonderful years working with this lovely bunch of passionate creators and makers."
             bullets={[
               "Creative lead for many large client projects.",
               "Partnered with Ikea to help them launch their first ever Smart Home product.",
-              "Represented Frog at many conferences worldwide (India, South Africa, France, Germany, Poland, Croatia, Ireland)",
+              "Represented Frog at many conferences worldwide (India, South Africa, France, Germany, Poland, Croatia, Ireland).",
               "Managed our intern program for many years, which was a key funnel for successful full-time hires.",
               "Hosted various in-office meetups as well as initiating the company ski trip.",
             ]}
@@ -273,13 +273,13 @@ function App() {
             title="Designer"
             company="Dublin, Ireland"
             period="2000 — 2010"
-            description="I've worked in many different jobs up previously. Here is just a small summary"
+            description="I've worked in many different jobs previously. Here is just a small summary"
             bullets={[
-              "🇸🇪 Spent a few months doing mobile UI design at Ustwo in Malmö",
-              "🖥 Worked in a few small web design agencies in Dublin",
-              "🤩 Built interactive installations for events",
-              "⚡️ Built educational games as a Flash Programmer",
-              "🍔 Cleaned tables at Burger King",
+              "🇸🇪 Spent a few months doing mobile UI design at Ustwo in Malmö.",
+              "🖥 Worked in a few small web design agencies in Dublin.",
+              "🤩 Built interactive installations for events.",
+              "⚡️ Built educational games as a Flash Programmer.",
+              "🍔 Cleaned tables at Burger King.",
             ]}
           />
         </Section>
@@ -303,7 +303,7 @@ function App() {
             title="The Inner Game of Design"
             company="CIID Summer School, Copenhagen, Denmark"
             period=""
-            link="https://www.youtube.com/watch?v=FEcclWVSb-w&"
+            link="https://www.youtube.com/watch?v=FEcclWVSb-w"
           />
         </Section>
 
