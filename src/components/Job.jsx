@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowUpRight, Play } from "@phosphor-icons/react";
 import Lightbox from "./Lightbox";
 
 export default function Job({
@@ -17,6 +17,7 @@ export default function Job({
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [hasDragged, setHasDragged] = useState(false);
 
   const openLightbox = (index) => {
     setCurrentMediaIndex(index);
@@ -33,6 +34,7 @@ export default function Job({
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
+    setHasDragged(false);
     setStartX(e.clientX);
     setScrollLeft(e.currentTarget.scrollLeft);
     e.currentTarget.style.cursor = "grabbing";
@@ -40,19 +42,23 @@ export default function Job({
 
   const handleMouseLeave = (e) => {
     setIsDragging(false);
-    e.currentTarget.style.cursor = "grab";
+    e.currentTarget.style.cursor = "pointer";
   };
 
   const handleMouseUp = (e) => {
     setIsDragging(false);
-    e.currentTarget.style.cursor = "grab";
+    e.currentTarget.style.cursor = "pointer";
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
     e.preventDefault();
+
     const x = e.clientX;
     const walk = x - startX;
+    if (Math.abs(walk) > 5) {
+      setHasDragged(true);
+    }
     e.currentTarget.scrollLeft = scrollLeft - walk;
   };
 
@@ -98,7 +104,7 @@ export default function Job({
 
         {media && media.length > 0 && (
           <div
-            className="flex flex-row flex-nowrap gap-3 mt-4 h-32 overflow-x-auto pr-8 cursor-grab select-none scrollbar-minimal"
+            className="flex flex-row flex-nowrap gap-3 mt-4 h-32 overflow-x-auto pr-8 cursor-pointer select-none scrollbar-minimal"
             style={{
               WebkitMaskImage:
                 "linear-gradient(to right, black 90%, transparent 100%)",
@@ -113,8 +119,8 @@ export default function Job({
             {media.map((item, index) => (
               <div
                 key={index}
-                className="relative cursor-grab flex-none aspect-video overflow-y-scroll h-32 rounded-lg hover:brightness-125 transition-scale transition-opacity bg-gray-800"
-                onClick={() => openLightbox(index)}
+                className="relative group flex-none aspect-video overflow-y-scroll h-32 rounded-lg hover:brightness-125 transition-scale transition-opacity bg-gray-800"
+                onClick={() => !hasDragged && openLightbox(index)}
               >
                 {item.type === "image" ? (
                   <img
@@ -124,14 +130,23 @@ export default function Job({
                     className="w-full h-32 object-cover aspect-video"
                   />
                 ) : (
-                  <video
-                    src={item.url}
-                    className="w-full h-32 object-cover aspect-video"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
+                  <>
+                    <video
+                      src={item.url}
+                      className="w-full h-32 object-cover aspect-video"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-75 ease-in pointer-events-none">
+                      <Play
+                        size={36}
+                        weight="fill"
+                        className="text-gray-800 drop-shadow-[0_0_9px_rgba(255,255,255,0.4)] mix-blend-plus-darker"
+                      />
+                    </div>
+                  </>
                 )}
               </div>
             ))}

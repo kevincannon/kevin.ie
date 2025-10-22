@@ -50,7 +50,7 @@ export default function Lightbox({
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 cursor-pointer"
+        className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-120 ease-in"
       >
         <XCircle size={24} weight="fill" />
       </button>
@@ -79,21 +79,21 @@ export default function Lightbox({
 
       {media.length > 1 && (
         <div
-          className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-6 text-cv-white"
+          className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-1 text-cv-white"
           onClick={(e) => e.stopPropagation()}
         >
           <button
             onClick={onPrev}
-            className="text-4xl hover:text-gray-300 px-4 cursor-pointer"
+            className="text-4xl hover:text-gray-300 px-4 cursor-pointer hover:scale-110 transition-all duration-120 ease-in"
           >
             <CaretCircleLeft size={24} weight="fill" />
           </button>
           <div className="text-sm pt-1 font-normal text-cv-muted">
-            {currentIndex + 1} / {media.length}
+            {currentIndex + 1}/{media.length}
           </div>
           <button
             onClick={onNext}
-            className="text-4xl hover:text-gray-300 px-4 cursor-pointer"
+            className="text-4xl hover:text-gray-300 px-4 cursor-pointer hover:scale-110 transition-all duration-120 ease-in"
           >
             <CaretCircleRight size={24} weight="fill" />
           </button>
