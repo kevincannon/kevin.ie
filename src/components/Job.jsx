@@ -98,7 +98,7 @@ export default function Job({
 
         {media && media.length > 0 && (
           <div
-            className="flex flex-row flex-nowrap gap-3 mt-4 h-32 overflow-x-auto pr-8 cursor-grab select-none"
+            className="flex flex-row flex-nowrap gap-3 mt-4 h-32 overflow-x-auto pr-8 cursor-grab select-none scrollbar-minimal"
             style={{
               WebkitMaskImage:
                 "linear-gradient(to right, black 90%, transparent 100%)",

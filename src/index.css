@@ -48,3 +48,36 @@ strong {
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
 }
+
+/* Minimal scrollbar styling */
+.scrollbar-minimal {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.scrollbar-minimal:hover {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.scrollbar-minimal::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-minimal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-minimal::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.scrollbar-minimal:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.scrollbar-minimal:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
