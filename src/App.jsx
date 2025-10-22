@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="min-h-screen py-12 px-7 text-cv-text">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-4">
