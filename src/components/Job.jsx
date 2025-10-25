@@ -73,13 +73,13 @@ export default function Job({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group text-cv-white no-underline hover:underline inline-flex items-center gap-1"
+              className="group text-cv-white no-underline hover:underline transition-all duration-300 inline-flex items-center gap-1"
             >
               {title}
               <ArrowUpRight
                 size={16}
                 weight="regular"
-                className="flex-shrink-0 transition-all duration-300 translate-y-px -translate-x-px group-hover:-translate-y-0 group-hover:translate-x-0"
+                className="flex-shrink-0 transition-all duration-300 ease-out hover:rotate-45 translate-y-px -translate-x-px group-hover:-translate-y-0 group-hover:translate-x-0"
               />
             </a>
           ) : (
@@ -104,7 +104,7 @@ export default function Job({
 
         {media && media.length > 0 && (
           <div
-            className="flex flex-row flex-nowrap gap-3 mt-4 h-32 overflow-x-auto pr-8 cursor-pointer  scrollbar-minimal"
+            className="flex flex-row flex-nowrap gap-3 mt-4 p-2 relative -left-2 h-36 overflow-x-auto overflow-y-visible pr-8 cursor-pointer  scrollbar-minimal"
             style={{
               WebkitMaskImage:
                 "linear-gradient(to right, black 90%, transparent 100%)",
@@ -119,7 +119,7 @@ export default function Job({
             {media.map((item, index) => (
               <div
                 key={index}
-                className="relative group flex-none aspect-video object-cover object-center overflow-hidden shadow-sm hover:shadow h-28 rounded-lg  bg-gray-800/10"
+                className="relative group flex-none aspect-video object-cover object-center overflow-hidden shadow-md hover:shadow-lg h-28 rounded-lg  bg-gray-800/10"
                 onClick={() => !hasDragged && openLightbox(index)}
               >
                 {item.type === "image" ? (
@@ -127,7 +127,7 @@ export default function Job({
                     src={item.thumbnailUrl || item.url}
                     draggable={false}
                     alt=""
-                    className="w-full h-32 object-cover object-center aspect-video select-none hover:scale-105 transition-transform duration-200 ease-in"
+                    className="w-full h-32 object-cover object-center  aspect-video select-none hover:scale-105 transition-transform duration-200 ease-in"
                   />
                 ) : (
                   <>
