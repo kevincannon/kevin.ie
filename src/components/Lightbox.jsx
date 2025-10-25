@@ -56,7 +56,7 @@ export default function Lightbox({
       </button>
 
       <div
-        className="max-w-6xl max-h-[75vh] overflow-auto rounded-1xl"
+        className="max-w-6xl max-h-[75vh] overflow-hidden rounded-xl"
         onClick={(e) => e.stopPropagation()}
       >
         {current.type === "image" ? (

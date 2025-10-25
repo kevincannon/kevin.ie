@@ -104,10 +104,10 @@ export default function Job({
 
         {media && media.length > 0 && (
           <div
-            className="flex flex-row flex-nowrap gap-3 mt-4 p-2 relative -left-2 h-36 overflow-x-auto overflow-y-visible pr-8 cursor-pointer  scrollbar-minimal"
+            className="flex flex-row flex-nowrap gap-3 mt-4 p-2 relative -left-2 h-36 overflow-x-auto rounded-md overflow-y-visible pr-8 cursor-pointer  scrollbar-minimal"
             style={{
               WebkitMaskImage:
-                "linear-gradient(to right, black 90%, transparent 100%)",
+                "linear-gradient(to right, transparent 0%, black 1%, black 95%, transparent 100%)",
               maskImage:
                 "linear-gradient(to right, black 90%, transparent 100%)",
             }}
