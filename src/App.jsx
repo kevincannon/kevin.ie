@@ -196,7 +196,7 @@ function App() {
             media={[
               {
                 type: "video",
-                url: "/media/Sr-Design-Manager-at-Pitch-1.mp4",
+                url: "/media/AI-Presentation-Generator-at-Pitch.mp4",
               },
               {
                 type: "video",
@@ -208,7 +208,7 @@ function App() {
               },
               {
                 type: "video",
-                url: "/media/Sr-Design-Manager-at-Pitch-4.mp4",
+                url: "/media/Presentation-Power-Tools-at-Pitch-1.mp4",
               },
             ]}
           />
