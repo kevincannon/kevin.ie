@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  /* background-color: #0d120e; */
   background-color: var(--color-cv-dark);
   background-image: url("/media/HeroGradient.png");
   background-attachment: fixed;

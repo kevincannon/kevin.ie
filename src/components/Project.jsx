@@ -46,13 +46,13 @@ export default function Project({ title, description, link, media }) {
             >
               {item.type === 'image' ? (
                 <img
-                  src={item.url}
+                  src={item.thumbnailUrl || item.url}
                   alt=""
                   className="w-full h-32 object-cover"
                 />
               ) : (
                 <video
-                  src={item.url}
+                  src={item.thumbnailUrl || item.url}
                   className="w-full h-32 object-cover"
                   autoPlay
                   loop

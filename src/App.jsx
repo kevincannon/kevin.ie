@@ -85,6 +85,8 @@ function App() {
               {
                 type: "video",
                 url: "/media/AI-Presentation-Generator-at-Pitch.mp4",
+                thumbnailUrl:
+                  "/media/AI-Presentation-Generator-at-Pitch_thumbnail.mp4",
               },
             ]}
           />
@@ -139,7 +141,13 @@ function App() {
             period="2024"
             description="Web app for creating customisable animated backgrounds. Inspired by my interest in shaders, Three.js, and SVG animation and the challenge of working with them."
             link="http://fluidmotion.app"
-            media={[{ type: "video", url: "/media/FluidMotion.mp4" }]}
+            media={[
+              {
+                type: "video",
+                url: "/media/FluidMotion.mp4",
+                thumbnailUrl: "/media/FluidMotion_thumbnail.mp4",
+              },
+            ]}
           />
         </Section>
 
@@ -197,6 +205,8 @@ function App() {
               {
                 type: "video",
                 url: "/media/AI-Presentation-Generator-at-Pitch.mp4",
+                thumbnailUrl:
+                  "/media/AI-Presentation-Generator-at-Pitch_thumbnail.mp4",
               },
               {
                 type: "video",

@@ -104,7 +104,7 @@ export default function Job({
 
         {media && media.length > 0 && (
           <div
-            className="flex flex-row flex-nowrap gap-3 mt-4 h-32 overflow-x-auto pr-8 cursor-pointer select-none scrollbar-minimal"
+            className="flex flex-row flex-nowrap gap-3 mt-4 h-32 overflow-x-auto pr-8 cursor-pointer  scrollbar-minimal"
             style={{
               WebkitMaskImage:
                 "linear-gradient(to right, black 90%, transparent 100%)",
@@ -119,31 +119,31 @@ export default function Job({
             {media.map((item, index) => (
               <div
                 key={index}
-                className="relative group flex-none aspect-video overflow-y-scroll h-32 rounded-lg hover:brightness-125 transition-scale transition-opacity bg-gray-800"
+                className="relative group flex-none aspect-video object-cover object-center overflow-hidden shadow-sm hover:shadow h-28 rounded-lg  bg-gray-800/10"
                 onClick={() => !hasDragged && openLightbox(index)}
               >
                 {item.type === "image" ? (
                   <img
-                    src={item.url}
+                    src={item.thumbnailUrl || item.url}
                     draggable={false}
                     alt=""
-                    className="w-full h-32 object-cover aspect-video"
+                    className="w-full h-32 object-cover object-center aspect-video select-none hover:scale-105 transition-transform duration-200 ease-in"
                   />
                 ) : (
                   <>
                     <video
-                      src={item.url}
-                      className="w-full h-32 object-cover aspect-video"
+                      src={item.thumbnailUrl || item.url}
+                      className="aspect-video object-cover hover:scale-105 transition-transform duration-200 ease-in"
                       autoPlay
                       loop
                       muted
                       playsInline
                     />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-75 ease-in pointer-events-none">
+                    <div className="absolute z-20 inset-0 flex items-center justify-center scale-50 opacity-1 group-hover:scale-100 group-hover:opacity-100 transition-transform duration-200 ease-out pointer-events-none">
                       <Play
                         size={36}
                         weight="fill"
-                        className="text-gray-800 drop-shadow-[0_0_9px_rgba(255,255,255,0.4)] mix-blend-plus-darker"
+                        className="text-neutral-900/90 drop-shadow-[0_0_6px_rgba(255,255,255,0.3)]"
                       />
                     </div>
                   </>
