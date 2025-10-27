@@ -65,8 +65,8 @@ function App() {
         <Section title="About">
           <p>
             Design leader specialising in AI-powered tools and emerging
-            technologies. I enjoy leading focused multiple teams that build,
-            iterate and ship high impact work.
+            technologies. I enjoy leading focused teams that build, iterate and
+            ship high impact work.
           </p>
           <p>
             Over 20 years' experience, working with agencies, startups and
