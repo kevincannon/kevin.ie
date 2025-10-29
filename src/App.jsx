@@ -39,7 +39,7 @@ function App() {
             <div className="flex flex-col">
               <h1 className="font-normal text-cv-white">Kevin Cannon</h1>
               <p className="mb-1.5 font-light">
-                Design Director @Grammarly{" "}
+                Design Director @Superhuman{" "}
                 <span className="max-sm:hidden inline-block">
                   <span className="text-cv-muted ">· </span>
                   Dubliner&nbsp;in&nbsp;Berlin
@@ -154,7 +154,7 @@ function App() {
         {/* Experience */}
         <Section title="Experience">
           <Job
-            title="Design Director at Grammarly"
+            title="Design Director at Grammarly/Superhuman"
             company="Berlin"
             period="2025 — Now"
             bullets={[
