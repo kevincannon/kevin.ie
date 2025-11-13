@@ -344,7 +344,12 @@ function App() {
         </Section>
 
         {/* Talks */}
-        <Section title="Talks">
+        <Section title="Selected Talks">
+          <p className="ml-34 text-md text-cv-muted">
+            I've been fortunate to speak at conferences and events around the
+            world, including India, South Africa Poland, France, Germany,
+            Croatia and Ireland.
+          </p>
           <Job
             title="Designing Communities"
             company="Defuse, Dublin, Ireland"
