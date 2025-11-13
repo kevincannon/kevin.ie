@@ -24,6 +24,35 @@ function App() {
     },
   ];
 
+  const companies = [
+    {
+      name: "Frog Design",
+      logo: "frog.svg",
+      height: 24,
+      url: "https://www.frog.co",
+    },
+    {
+      name: "Grammarly",
+      logo: "grammarly.svg",
+      height: 24,
+      url: "https://www.grammarly.com",
+    },
+    {
+      name: "Pitch",
+      logo: "pitch.svg",
+      height: 19,
+      url: "https://www.pitch.com",
+    },
+    { name: "Ikea", logo: "ikea.svg", height: 15, url: "https://www.ikea.com" },
+    {
+      name: "ustwo",
+      logo: "ustwo.svg",
+      height: 24,
+      url: "https://www.ustwo.com",
+    },
+    { name: "CIID", logo: "ciid.png", height: 19, url: "https://www.ciid.dk" },
+  ];
+
   return (
     <div className="min-h-screen py-12 px-7 text-cv-text">
       <div className="max-w-3xl mx-auto">
@@ -72,6 +101,26 @@ function App() {
             Over 20 years' experience, working with agencies, startups and
             pioneering companies.
           </p>
+
+          {/* Company Logos */}
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-8 mt-12 place-items-center">
+            {companies.map((company) => (
+              <a
+                key={company.name}
+                href={company.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group transition-all duration-100 p-0.5 hover:scale-105"
+              >
+                <img
+                  src={`/media/logos/${company.logo}`}
+                  alt={company.name}
+                  className="object-contain grayscale brightness-0 transition-all duration-200 invert !opacity-40 group-hover:!opacity-100"
+                  style={{ height: `${company.height}px` }}
+                />
+              </a>
+            ))}
+          </div>
         </Section>
 
         {/* Notable Projects */}
