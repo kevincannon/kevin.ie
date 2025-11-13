@@ -345,7 +345,7 @@ function App() {
 
         {/* Talks */}
         <Section title="Selected Talks">
-          <p className="ml-34 text-md text-cv-muted">
+          <p className="md:ml-34 text-md text-cv-muted">
             I've been fortunate to speak at conferences and events around the
             world, including India, South Africa Poland, France, Germany,
             Croatia and Ireland.

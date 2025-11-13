@@ -65,7 +65,7 @@ export default function Job({
   return (
     <div className="mb-8 grid md:grid-cols-[110px_1fr] gap-2 md:gap-6 w-full">
       {/* 2 colums on desktop */}
-      <div className="text-sm text-cv-muted top-0.5 relative">{period}</div>
+      <div className="text-sm text-cv-muted top-[4px] relative">{period}</div>
       <div className="min-w-0">
         <h3 className="text- font-light text-cv-white mb-1 ">
           {link ? (
