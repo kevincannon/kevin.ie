@@ -79,7 +79,7 @@ export default function Job({
               <ArrowUpRight
                 size={16}
                 weight="regular"
-                className="flex-shrink-0 transition-all duration-300 ease-out hover:rotate-45 translate-y-px -translate-x-px group-hover:-translate-y-0 group-hover:translate-x-0"
+                className="flex-shrink-0 transition-all translate-y-px -translate-x-px group-hover:-translate-y-0 group-hover:translate-x-0"
               />
             </a>
           ) : (
