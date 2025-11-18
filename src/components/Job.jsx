@@ -103,53 +103,55 @@ export default function Job({
         )}
 
         {media && media.length > 0 && (
-          <div
-            className="flex flex-row flex-nowrap gap-3 mt-4 p-2 relative -left-2 h-36 overflow-x-auto rounded-md overflow-y-visible pr-8 cursor-pointer  scrollbar-minimal"
-            style={{
-              WebkitMaskImage:
-                "linear-gradient(to right, transparent 0%, black 1%, black 95%, transparent 100%)",
-              maskImage:
-                "linear-gradient(to right, black 90%, transparent 100%)",
-            }}
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove}
-          >
-            {media.map((item, index) => (
-              <div
-                key={index}
-                className="relative group flex-none aspect-video object-cover object-center overflow-hidden shadow-md hover:shadow-lg h-28 rounded-lg  bg-gray-800/10"
-                onClick={() => !hasDragged && openLightbox(index)}
-              >
-                {item.type === "image" ? (
-                  <img
-                    src={item.thumbnailUrl || item.url}
-                    draggable={false}
-                    alt=""
-                    className="w-full h-32 object-cover object-center  aspect-video select-none hover:scale-105 transition-transform duration-200 ease-in"
-                  />
-                ) : (
-                  <>
-                    <video
+          <div className="relative">
+            <div
+              className="flex flex-row flex-nowrap gap-3 mt-4 p-2 relative -left-2 h-36 overflow-x-auto rounded-md overflow-y-visible pr-6 cursor-pointer  scrollbar-minimal"
+              style={{
+                maskImage:
+                  "linear-gradient(to right, black 90%, rgba(0,0,0,0.8) 94%, rgba(0,0,0,0.5) 96%, rgba(0,0,0,0.2) 98%, transparent 99%)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, black 90%, rgba(0,0,0,0.8) 94%, rgba(0,0,0,0.5) 96%, rgba(0,0,0,0.2) 98%, transparent 99%)",
+              }}
+              onMouseDown={handleMouseDown}
+              onMouseLeave={handleMouseLeave}
+              onMouseUp={handleMouseUp}
+              onMouseMove={handleMouseMove}
+            >
+              {media.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative group flex-none aspect-video object-cover object-center overflow-hidden shadow-md hover:shadow-lg h-28 rounded-lg  bg-gray-800/10"
+                  onClick={() => !hasDragged && openLightbox(index)}
+                >
+                  {item.type === "image" ? (
+                    <img
                       src={item.thumbnailUrl || item.url}
-                      className="aspect-video object-cover hover:scale-105 transition-transform duration-200 ease-in"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
+                      draggable={false}
+                      alt=""
+                      className="w-full h-32 object-cover object-center  aspect-video select-none hover:scale-105 transition-transform duration-200 ease-in"
                     />
-                    <div className="absolute z-20 inset-0 flex items-center justify-center scale-50 opacity-1 group-hover:scale-100 group-hover:opacity-100 transition-transform duration-200 ease-out pointer-events-none">
-                      <Play
-                        size={36}
-                        weight="fill"
-                        className="text-neutral-900/90 drop-shadow-[0_0_6px_rgba(255,255,255,0.3)]"
+                  ) : (
+                    <>
+                      <video
+                        src={item.thumbnailUrl || item.url}
+                        className="aspect-video object-cover hover:scale-105 transition-transform duration-200 ease-in"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
                       />
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
+                      <div className="absolute z-20 inset-0 flex items-center justify-center scale-50 opacity-1 group-hover:scale-100 group-hover:opacity-100 transition-transform duration-200 ease-out pointer-events-none">
+                        <Play
+                          size={36}
+                          weight="fill"
+                          className="text-neutral-900/90 drop-shadow-[0_0_6px_rgba(255,255,255,0.3)]"
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
