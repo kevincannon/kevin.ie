@@ -2,6 +2,7 @@ import { useState } from "react";
 import Section from "./components/Section";
 import Job from "./components/Job";
 import Lightbox from "./components/Lightbox";
+import GrammarlyCorrection from "./components/GrammarlyCorrection";
 
 function App() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -68,7 +69,7 @@ function App() {
             <div className="flex flex-col">
               <h1 className="font-normal text-cv-white">Kevin Cannon</h1>
               <p className="mb-1.5 font-light">
-                Design Director @Superhuman{" "}
+                Design Director<span className="max-sm:block"> @<GrammarlyCorrection /></span>{" "}
                 <span className="max-sm:hidden inline-block">
                   <span className="text-cv-muted ">· </span>
                   Dubliner&nbsp;in&nbsp;Berlin
