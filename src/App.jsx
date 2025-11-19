@@ -99,8 +99,8 @@ function App() {
             ship high impact work.
           </p>
           <p>
-            Over 20 years' experience, working with agencies, startups and
-            pioneering companies.
+            Originally from Dublin, now based in Berlin, with over 20 years'
+            experience working with agencies, startups and pioneering companies.
           </p>
 
           {/* Company Logos */}
