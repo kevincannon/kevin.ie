@@ -60,12 +60,18 @@ function App() {
         {/* Header */}
         <header className="mb-12 text-center">
           <div className="flex flex-col items-center gap-2">
-            <img
-              src="media/profilePhoto.jpg"
-              alt="Kevin Cannon"
-              className="w-24 h-24 rounded-full object-cover shadow-2xl cursor-pointer hover:brightness-110 transition-all mb-3"
-              onClick={() => setLightboxOpen(true)}
-            />
+            <div className="group relative w-28 h-28 rounded-full overflow-hidden shadow-lg">
+              <img
+                src="media/profilePhoto.jpg"
+                alt="Kevin Cannon"
+                className="w-28 h-28 rounded-full object-cover draggable-none group-hover:invisible"
+              />
+              <img
+                src="media/profilePhoto-shades.jpg"
+                alt="Kevin Cannon"
+                className="absolute inset-0 w-28 h-28 rounded-full object-cover draggable-none invisible group-hover:visible"
+              />
+            </div>
             <h1 className="font-normal text-cv-white ">Kevin Cannon</h1>
             <p className="font-light">
               Design Director @<GrammarlyCorrection />
