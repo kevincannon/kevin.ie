@@ -82,7 +82,7 @@ function GrammarlyCorrection() {
       {showCard && (
         <div
           ref={cardRef}
-          className="absolute top-full -translate-y-[4px]  sm:left-0 sm:translate-x-0 mt-2 w-64 bg-white rounded-xl shadow-xl outline outline-gray-800/20 p-3 z-50 opacity-0 animate-[fadeIn_150ms_ease-in_forwards]"
+          className="absolute top-full -translate-y-[4px] -translate-x-[100px] sm:left-0 sm:translate-x-0 mt-2 w-64 bg-white rounded-xl shadow-xl outline outline-gray-800/20 p-3 z-50 opacity-0 animate-[fadeIn_150ms_ease-in_forwards]"
           style={{
             animation: "fadeIn 150ms ease-in forwards",
           }}

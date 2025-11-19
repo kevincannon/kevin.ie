@@ -58,35 +58,29 @@ function App() {
     <div className="min-h-screen py-12 px-7 text-cv-text">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-4">
+        <header className="mb-12 text-center">
+          <div className="flex flex-col items-center gap-2">
             <img
               src="media/profilePhoto.jpg"
               alt="Kevin Cannon"
-              className="w-24 h-24 rounded-full object-cover flex-none shadow-2xl cursor-pointer hover:brightness-110 transition-all"
+              className="w-24 h-24 rounded-full object-cover shadow-2xl cursor-pointer hover:brightness-110 transition-all mb-3"
               onClick={() => setLightboxOpen(true)}
             />
-            <div className="flex flex-col">
-              <h1 className="font-normal text-cv-white">Kevin Cannon</h1>
-              <p className="mb-1.5 font-light">
-                Design Director<span className="max-sm:block"> @<GrammarlyCorrection /></span>{" "}
-                <span className="max-sm:hidden inline-block">
-                  <span className="text-cv-muted ">· </span>
-                  Dubliner&nbsp;in&nbsp;Berlin
-                </span>
-              </p>
-              <div className="flex flex-row !gap-2 relative -top-1 -left-1">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.icon}
-                    className={`fa-brands ${link.icon} !text-cv-muted hover:!text-cv-white hover:bg-white/[0.07] hover:scale-110 transition-all !no-underline p-1.5 rounded`}
-                    href={link.url}
-                    title={link.title}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  ></a>
-                ))}
-              </div>
+            <h1 className="font-normal text-cv-white ">Kevin Cannon</h1>
+            <p className="font-light">
+              Design Director @<GrammarlyCorrection />
+            </p>
+            <div className="flex flex-row !gap-2">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.icon}
+                  className={`fa-brands ${link.icon} !text-cv-muted/40   hover:!text-cv-white hover:bg-white/[0.07] hover:scale-110 transition-all !no-underline p-1.5 rounded`}
+                  href={link.url}
+                  title={link.title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+              ))}
             </div>
           </div>
         </header>
