@@ -208,21 +208,22 @@ function App() {
             company="Berlin"
             period="2025 — Now"
             bullets={[
-              "Building out an AI-first design team in Berlin office.",
-              "Growing employer brand within the Berlin design scene.",
-              "Leading design for AI Agents initiative.",
+              "Mission:",
+              "Building out an AI-first design team in our Berlin hub.",
+              "Leading design for our AI Agents initiative, a core company bet.",
+              "Establishing Grammarly/Superhuman as a destination employer for designers in Berlin.",
             ]}
             link="https://www.grammarly.com/back-to-school"
           />
           <Job
-            title="Designer & Advisor at Aftershoot"
+            title="Design Leader/Advisor at Aftershoot"
             company="Delhi, Remote"
             period="2024 — 2025"
+            description="Aftershoot is an AI-first tool for professional photographers."
             bullets={[
-              "Aftershoot is an AI-first tool for professional photographers.",
-              "Led product design and UX improvements, expanded the design team.",
-              "Advised founders on using design strategically to achieve business goals.",
-              "Repositioned product to attract prosumer audience.",
+              "Partnered with founders on a fundamental UX rearchitecture of the app, setting the product up to compete with Lightroom",
+              "Levelled up design team, hired a Principal Designer, and set a new bar for design craft.",
+              "Collaborated with Head of Engineering to build a frontend team capable of raising product quality.",
               "Ongoing advisory role.",
             ]}
             link="https://www.aftershoot.com"
@@ -231,24 +232,18 @@ function App() {
             title="Designer & Advisor at Elicit"
             company="Oakland, Remote"
             period="2024"
-            bullets={[
-              "Helping design the future of large-scale research with AI.",
-              "Design hiring & advising.",
-              "Product strategy.",
-              "Product Design & UX.",
-            ]}
+            description="Short-term engagement: product design, UX, and design team hiring for an AI-powered research tool."
             link="https://www.elicit.com"
           />
           <Job
             title="Sr Design Manager at Pitch"
             company="Berlin"
             period="2019 — 2024"
-            description="Led product design for core editor and AI features, balancing feature parity with meaningful differentiation."
+            description="Joined pre-launch. Led product design for core editor and AI features."
             bullets={[
-              "Delivered many of the product's most differentiating features.",
-              "Led design for an AI presentation generator that was significantly better than the competitors.",
-              "Led a world-class craft-focused product design team of 8, including a Design Manager and Design Engineer.",
-              "Maintained high retention amongst my team.",
+              "Designed and shipped some of Pitch's most innovative and well-loved features: Smart Tidy, Smart Swapping, Slide Status, CMD+K menu.",
+              "Led design for an AI presentation generator that outperformed competitors.",
+              "Managed a craft-focused design team of 8, including a Design Manager and Design Engineer.",
             ]}
             link="https://www.pitch.com"
             media={[
@@ -278,11 +273,11 @@ function App() {
             period="2010 — 2018"
             description="Spent many wonderful years working with this lovely bunch of passionate creators and makers."
             bullets={[
-              "Creative lead for many large client projects.",
+              "Led design for major clients in healthcare, smart home, and automotive.",
               "Partnered with Ikea to help them launch their first ever Smart Home product.",
-              "Represented Frog at many conferences worldwide (India, South Africa, France, Germany, Poland, Croatia, Ireland).",
-              "Managed our intern program for many years, which was a key funnel for successful full-time hires.",
-              "Hosted various in-office meetups as well as initiating the company ski trip.",
+              "Represented Frog at many conferences worldwide (e.g. India, South Africa, France, Croatia).",
+              "Ran the intern program, a key pipeline for full-time hires.",
+              "Fostered studio culture by initiating the annual Munich-Milan ski trip and hosting community meetups.",
             ]}
             link="https://www.frog.co"
             media={[
