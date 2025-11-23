@@ -65,12 +65,28 @@ function GrammarlyCorrection() {
 
   return (
     <span className="relative inline-block">
+      <style>{`
+        .grammarly-underline::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ef4444;
+          transform: scaleX(0);
+          transform-origin: left;
+          animation: underline-grow 0.8s ease-out 0.1s forwards;
+          animation-delay: 1.5s;
+        }
+        @keyframes underline-grow {
+          to { transform: scaleX(1); }
+        }
+      `}</style>
       <span
         ref={textRef}
-        className={`cursor-pointer !hover:text-white ${
-          !isAccepted
-            ? "underline decoration-wavy decoration-red-500 decoration-1.5 underline-offset-4"
-            : ""
+        className={`cursor-pointer !hover:text-white relative ${
+          !isAccepted ? "grammarly-underline" : ""
         }`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
