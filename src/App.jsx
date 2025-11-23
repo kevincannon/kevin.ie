@@ -221,7 +221,7 @@ function App() {
             period="2024 — 2025"
             description="Aftershoot is an AI-first tool for professional photographers."
             bullets={[
-              "Partnered with founders on a fundamental UX rearchitecture of the app, setting the product up to compete with Lightroom",
+              "Partnered with founders on a fundamental UX rearchitecture of the app, setting the product up to compete with Lightroom.",
               "Levelled up design team, hired a Principal Designer, and set a new bar for design craft.",
               "Collaborated with Head of Engineering to build a frontend team capable of raising product quality.",
               "Ongoing advisory role.",
