@@ -208,7 +208,6 @@ function App() {
             company="Berlin"
             period="2025 — Now"
             bullets={[
-              "Mission:",
               "Building out an AI-first design team in our Berlin hub.",
               "Leading design for our AI Agents initiative, a core company bet.",
               "Establishing Grammarly/Superhuman as a destination employer for designers in Berlin.",
@@ -221,9 +220,9 @@ function App() {
             period="2024 — 2025"
             description="Aftershoot is an AI-first tool for professional photographers."
             bullets={[
-              "Partnered with founders on a fundamental UX rearchitecture of the app, setting the product up to compete with Lightroom.",
               "Levelled up design team, hired a Principal Designer, and set a new bar for design craft.",
-              "Collaborated with Head of Engineering to build a frontend team capable of raising product quality.",
+              "Partnered with founders on a fundamental UX rearchitecture of the app, setting the product up to compete with Adobe Lightroom.",
+              "Collaborated with Head of Engineering to build a frontend team to raise product quality.",
               "Ongoing advisory role.",
             ]}
             link="https://www.aftershoot.com"
@@ -305,7 +304,7 @@ function App() {
           />
           <Job
             title="Visiting Lecturer at Copenhagen Institute of Interaction Design"
-            company="Copenhagen, Denmark"
+            company="Copenhagen"
             period="2015 — 2018"
             description="Taught several courses, notably 'Artefacts from the Future' a week-long crash-course in futurecasting and speculative design."
             link="https://www.ciid.dk"
@@ -326,7 +325,7 @@ function App() {
           />
           <Job
             title="Designer"
-            company="Dublin, Ireland"
+            company="Dublin"
             period="2000 — 2010"
             description="I've worked in many different jobs previously. Here is just a small summary"
             bullets={[
@@ -343,8 +342,8 @@ function App() {
         <Section title="Selected Talks">
           <p className="md:ml-34 text-md text-cv-muted">
             I've been fortunate to speak at conferences and events around the
-            world, including India, South Africa Poland, France, Germany,
-            Croatia and Ireland.
+            world, including India, South Africa, Poland, France, Germany,
+            Croatia and Ireland. Here are some of my favourite talks:
           </p>
           <Job
             title="Designing Communities"
