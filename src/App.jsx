@@ -94,7 +94,7 @@ function App() {
         {/* Bio */}
         <Section title="About">
           <p>
-            Design leader specialising in AI-powered tools and emerging
+            Design leader specialising in AI tools and emerging
             technologies. I enjoy leading focused teams that build, iterate and
             ship high impact work.
           </p>
@@ -231,7 +231,7 @@ function App() {
             title="Designer & Advisor at Elicit"
             company="Oakland, Remote"
             period="2024"
-            description="Short-term engagement: product design, UX, and design team hiring for an AI-powered research tool."
+            description="Short-term engagement: product design, UX, and design team hiring for an AI research tool."
             link="https://www.elicit.com"
           />
           <Job
