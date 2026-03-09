@@ -204,13 +204,13 @@ function App() {
         {/* Experience */}
         <Section title="Experience">
           <Job
-            title="Design Director at Grammarly/Superhuman"
+            title="Design Director at Superhuman (formerly Grammarly)"
             company="Berlin"
             period="2025 — Now"
             bullets={[
               "Building out an AI-first design team in our Berlin hub.",
               "Leading design for our AI Agents initiative, a core company bet.",
-              "Establishing Grammarly/Superhuman as a destination employer for designers in Berlin.",
+              "Establishing Superhuman (formerly Grammarly) as a destination employer for designers in Berlin.",
             ]}
             link="https://www.grammarly.com/back-to-school"
           />
@@ -223,7 +223,6 @@ function App() {
               "Levelled up design team, hired a Principal Designer, and set a new bar for design craft.",
               "Partnered with founders on a fundamental UX rearchitecture of the app, setting the product up to compete with Adobe Lightroom.",
               "Collaborated with Head of Engineering to build a frontend team to raise product quality.",
-              "Ongoing advisory role.",
             ]}
             link="https://www.aftershoot.com"
           />
