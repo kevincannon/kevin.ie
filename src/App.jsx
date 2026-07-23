@@ -1,11 +1,43 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Section from "./components/Section";
 import Job from "./components/Job";
 import Lightbox from "./components/Lightbox";
 import GrammarlyCorrection from "./components/GrammarlyCorrection";
 
+function setAvatarShifts(groupRef, activeIdx, phase) {
+  if (!groupRef.current) return;
+  const cs = getComputedStyle(document.documentElement);
+  const num = (name, fallback) => {
+    const v = parseFloat(cs.getPropertyValue(name));
+    return Number.isFinite(v) ? v : fallback;
+  };
+  const ease = (name, fallback) => cs.getPropertyValue(name).trim() || fallback;
+
+  const lift = num("--avatar-lift", -4);
+  const falloff = num("--avatar-falloff", 0.45);
+  const scale = num("--avatar-scale", 1.05);
+  const tf =
+    phase === "out"
+      ? ease("--avatar-ease-out", "cubic-bezier(0.34, 3.85, 0.64, 1)")
+      : ease("--avatar-ease-in", "cubic-bezier(0.22, 1, 0.36, 1)");
+
+  groupRef.current.querySelectorAll(".t-avatar").forEach((el, i) => {
+    el.style.transitionTimingFunction = tf;
+    if (activeIdx == null) {
+      el.style.setProperty("--shift", "0px");
+      el.style.setProperty("--scale-active", "1");
+      return;
+    }
+    const d = Math.abs(i - activeIdx);
+    el.style.setProperty("--shift", (lift * Math.pow(falloff, d)).toFixed(3) + "px");
+    el.style.setProperty("--scale-active", i === activeIdx ? String(scale) : "1");
+  });
+}
+
 function App() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const socialGroupRef = useRef(null);
+  const companyGroupRef = useRef(null);
 
   const socialLinks = [
     {
@@ -76,15 +108,20 @@ function App() {
             <p className="font-light">
               Design Director @<GrammarlyCorrection />
             </p>
-            <div className="flex flex-row !gap-2">
-              {socialLinks.map((link) => (
+            <div
+              ref={socialGroupRef}
+              className="flex flex-row !gap-2"
+              onMouseLeave={() => setAvatarShifts(socialGroupRef, null, "out")}
+            >
+              {socialLinks.map((link, i) => (
                 <a
                   key={link.icon}
-                  className={`fa-brands ${link.icon} !text-cv-muted/40   hover:!text-cv-white hover:bg-white/[0.07] hover:scale-110 transition-all !no-underline p-1.5 rounded`}
+                  className={`t-avatar fa-brands ${link.icon} !text-cv-muted/40   hover:!text-cv-white hover:bg-white/[0.07] transition-colors !no-underline p-1.5 rounded`}
                   href={link.url}
                   title={link.title}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onMouseEnter={() => setAvatarShifts(socialGroupRef, i, "in")}
                 ></a>
               ))}
             </div>
@@ -104,19 +141,24 @@ function App() {
           </p>
 
           {/* Company Logos */}
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-8 mt-12 place-items-center">
-            {companies.map((company) => (
+          <div
+            ref={companyGroupRef}
+            className="grid grid-cols-3 sm:grid-cols-6 gap-8 mt-12 place-items-center"
+            onMouseLeave={() => setAvatarShifts(companyGroupRef, null, "out")}
+          >
+            {companies.map((company, i) => (
               <a
                 key={company.name}
                 href={company.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group transition-all duration-100 p-0.5 hover:scale-105"
+                className="t-avatar group p-0.5"
+                onMouseEnter={() => setAvatarShifts(companyGroupRef, i, "in")}
               >
                 <img
                   src={`/media/logos/${company.logo}`}
                   alt={company.name}
-                  className="object-contain grayscale brightness-0 transition-all duration-200 invert !opacity-40 group-hover:!opacity-100"
+                  className="object-contain grayscale brightness-0 transition-all duration-200 ease-[var(--ease-smooth-out)] invert !opacity-40 group-hover:!opacity-100"
                   style={{ height: `${company.height}px` }}
                 />
               </a>

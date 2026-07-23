@@ -73,13 +73,13 @@ export default function Job({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group text-cv-white no-underline hover:underline transition-all duration-300 inline-flex items-center gap-1"
+              className="group text-cv-white no-underline hover:underline transition-all duration-[var(--duration-fast)] inline-flex items-center gap-1"
             >
               {title}
               <ArrowUpRight
                 size={16}
                 weight="regular"
-                className="flex-shrink-0 transition-all translate-y-px -translate-x-px group-hover:-translate-y-0 group-hover:translate-x-0"
+                className="flex-shrink-0 transition-all duration-[var(--duration-fast)] translate-y-px -translate-x-px group-hover:-translate-y-0 group-hover:translate-x-0"
               />
             </a>
           ) : (
@@ -128,13 +128,13 @@ export default function Job({
                       src={item.thumbnailUrl || item.url}
                       draggable={false}
                       alt=""
-                      className="w-full h-32 object-cover object-center  aspect-video select-none hover:scale-105 transition-transform duration-200 ease-in"
+                      className="w-full h-32 object-cover object-center  aspect-video select-none hover:scale-105 transition-transform duration-200 ease-[var(--ease-smooth-out)]"
                     />
                   ) : (
                     <>
                       <video
                         src={item.thumbnailUrl || item.url}
-                        className="aspect-video object-cover hover:scale-105 transition-transform duration-200 ease-in"
+                        className="aspect-video object-cover hover:scale-105 transition-transform duration-200 ease-[var(--ease-smooth-out)]"
                         autoPlay
                         loop
                         muted

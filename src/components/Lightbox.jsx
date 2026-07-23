@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   XCircle,
   CaretCircleRight,
@@ -14,6 +14,53 @@ export default function Lightbox({
   onPrev,
   title,
 }) {
+  const [modalState, setModalState] = useState("closed"); // closed | opening | open | closing
+  const closeTimeoutRef = useRef(null);
+  const openRafRef = useRef(null);
+  const isActive = modalState !== "closed";
+
+  useEffect(() => {
+    if (isOpen) {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+        closeTimeoutRef.current = null;
+      }
+      setModalState((prev) => (prev === "closed" ? "opening" : "open"));
+    } else {
+      setModalState((prev) => (prev === "closed" ? prev : "closing"));
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (modalState !== "opening") return;
+    // Mount at the pre-open scale/opacity first, then flip to is-open on the
+    // next frame so the browser has a state to transition from.
+    const raf1 = requestAnimationFrame(() => {
+      openRafRef.current = requestAnimationFrame(() => setModalState("open"));
+    });
+    return () => cancelAnimationFrame(raf1);
+  }, [modalState]);
+
+  useEffect(() => {
+    if (modalState !== "closing") return;
+    const closeDur =
+      parseFloat(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--modal-close-dur"
+        )
+      ) || 150;
+    closeTimeoutRef.current = setTimeout(() => {
+      setModalState("closed");
+    }, closeDur);
+    return () => clearTimeout(closeTimeoutRef.current);
+  }, [modalState]);
+
+  useEffect(() => {
+    return () => {
+      if (openRafRef.current) cancelAnimationFrame(openRafRef.current);
+    };
+  }, []);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -21,7 +68,7 @@ export default function Lightbox({
       }
     };
 
-    if (isOpen) {
+    if (isActive) {
       // Save the current scroll position
       const scrollY = window.scrollY;
       document.addEventListener("keydown", handleKeyDown);
@@ -44,15 +91,21 @@ export default function Lightbox({
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
       }
     };
-  }, [isOpen, onClose]);
+  }, [isActive, onClose]);
 
-  if (!isOpen || !media) return null;
+  if (!isActive || !media) return null;
 
   const current = media[currentIndex];
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 bg-blur backdrop-blur p-4"
+      className={`t-modal fixed inset-0 z-50 flex items-center justify-center bg-black/90 bg-blur backdrop-blur p-4 ${
+        modalState === "open"
+          ? "is-open"
+          : modalState === "closing"
+          ? "is-closing"
+          : ""
+      }`}
       style={{ height: "-webkit-fill-available", minHeight: "100dvh" }}
       onClick={onClose}
       onWheel={(e) => e.preventDefault()}
@@ -60,7 +113,7 @@ export default function Lightbox({
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-120 ease-in"
+        className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-120 ease-[var(--ease-smooth-out)]"
       >
         <XCircle size={24} weight="fill" />
       </button>
@@ -94,7 +147,7 @@ export default function Lightbox({
         >
           <button
             onClick={onPrev}
-            className="text-4xl hover:text-gray-300 px-4 cursor-pointer hover:scale-110 transition-all duration-120 ease-in"
+            className="text-4xl hover:text-gray-300 px-4 cursor-pointer hover:scale-110 transition-all duration-120 ease-[var(--ease-smooth-out)]"
           >
             <CaretCircleLeft size={24} weight="fill" />
           </button>
@@ -103,7 +156,7 @@ export default function Lightbox({
           </div>
           <button
             onClick={onNext}
-            className="text-4xl hover:text-gray-300 px-4 cursor-pointer hover:scale-110 transition-all duration-120 ease-in"
+            className="text-4xl hover:text-gray-300 px-4 cursor-pointer hover:scale-110 transition-all duration-120 ease-[var(--ease-smooth-out)]"
           >
             <CaretCircleRight size={24} weight="fill" />
           </button>
